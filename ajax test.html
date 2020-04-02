@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>テスト</title>
+  <link rel="stylesheet" type="text/css" href="ajax test.css">
+  <!--ここでjQueryのライブラリを読み込んでます。魔法の言葉です。-->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+
+<body class="body">
+  <div class="head-area">
+    <h1 class="site-ttl">ajaxサンプルです</h1>
+  </div>
+
+  <div class="main-area">
+    <main>
+      <!--検索フォームを作成しています。-->
+      <div class="search">
+        <div class="search-head"><b>検索</b></div>
+        <form id="searchform" method="post">
+          <table class="search-table">
+            <tr>
+              <th>都道府県-選択-</th>
+              <td><select id="request" name="pref_name">
+                  <option value="" selected></option>
+                  <option value="大阪府">大阪府</option>
+                  <option value="兵庫県">兵庫県</option>
+                  <option value="京都府">京都府</option>
+                </select></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><input class="submit-btn" type="submit" value="検索" id="search_button" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div id="res"></div>
+    </main>
+  </div>
+
+  <div class="footer-area">
+    <p>2020/02/06テスト</p>
+  </div>
+
+  <!--今回メインのajax処理を記載したjsファイルを読み込みます。-->
+  <script type="text/javascript" src="ajax test.js"></script>
+</body>
+
+</html>
